@@ -4,7 +4,7 @@ var win = 0;
 var lose = 0;
 	
 	//display scoreboard
-	document.querySelector('#demo').innerHTML =	  
+	document.querySelector('#demo').innerHTML =	  //'#example' "example" '.example'
 	  '<p>Wins: ' + win + '</p>' +
 	  '<p>Losses: ' + lose + '</p>';
 
@@ -17,16 +17,16 @@ function guessNumb() {
 	var myNumb = parseInt(getNumb);
 
 	//conditionals for the variables
-	if (myNumb === compNumb){
+	//in case play picks a guess larger than the range
+	if ((myNumb > diffLvl) || (myNumb === 0) || (compNumb === 0) || ((myNumb === 0) && (compNumb === 0))){
+		alert("please choose another number")
+	}
+	else if (myNumb === compNumb){
 		//track wins
 		win++;
 		//display victory message
 		document.getElementById("demo").innerHTML = "<h3><p>You guessed right!</p></h3>" + "<p>Wins: " + win + "</p>" +
 		"<p>Losses: " + lose + "</p>";
-	}
-	//in case play picks a guess larger than the range
-	else if (myNumb > diffLvl){
-		alert("please choose a number smaller than the range")
 	}
 	else{
 		//track losses
