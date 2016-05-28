@@ -18,8 +18,11 @@ function guessNumb() {
 
 	//conditionals for the variables
 	//in case play picks a guess larger than the range
-	if ((myNumb > diffLvl) || (myNumb === 0) || (compNumb === 0) || ((myNumb === 0) && (compNumb === 0))){
-		alert("please choose another number")
+	if ((myNumb === 0) && (compNumb === 0)){
+		alert("There can't be two zeroes")
+	}
+	else if ((myNumb > diffLvl) || (myNumb === 0) || (compNumb === 0) ){
+		alert("please choose another number, or make the range larger than the guess")
 	}
 	else if (myNumb === compNumb){
 		//track wins
