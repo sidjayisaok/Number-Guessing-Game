@@ -17,10 +17,11 @@ function guessNumb() {
 	var myNumb = parseInt(getNumb);
 
 	//conditionals for the variables
-	//in case play picks a guess larger than the range
+	//this eliminates an instant win scenario
 	if ((myNumb === 0) && (compNumb === 0)){
 		alert("There can't be two zeroes")
 	}
+	//in case player picks a guess larger than the range
 	else if ((myNumb > diffLvl) || (myNumb === 0) || (compNumb === 0) ){
 		alert("please choose another number, or make the range larger than the guess")
 	}
