@@ -2,9 +2,9 @@
 //set the scoreboard parameters
 var win = 0;
 var lose = 0;
-	
+
 	//display scoreboard
-	document.querySelector('#demo').innerHTML =	  //'#example' "example" '.example'
+	document.querySelector('#demo').innerHTML =	
 	  '<p>Wins: ' + win + '</p>' +
 	  '<p>Losses: ' + lose + '</p>';
 
@@ -44,7 +44,5 @@ function guessNumb() {
 	  if(lose===5){
 		  document.getElementById("demo").innerHTML= "<h3>You're out of guesses! You lose!</h3>";
 	  }
-	  
+
 };
-
-
